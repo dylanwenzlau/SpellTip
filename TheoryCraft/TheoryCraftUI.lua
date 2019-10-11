@@ -216,9 +216,9 @@ function TheoryCraft_UpdateOutfitTab()
 					rank:SetPushedTexture(nil)
 					rank:SetHighlightTexture(nil)
 					if (TheoryCraft_Talents[i].forceto) and (TheoryCraft_Talents[i].forceto ~= -1) and (TheoryCraft_Talents[i].forceto ~= currank) then
-						rank:SetTextColor(1,1,0.1)
+						-- rank:SetTextColor(1,1,0.1)
 					else
-						rank:SetTextColor(0.1,1,0.1)
+						-- rank:SetTextColor(0.1,1,0.1)
 					end
 					rank:Show()
 					number = number + 1
@@ -486,7 +486,7 @@ function TheoryCraft_InitDropDown(this)
 	i = AddButton(i, "Spellcasts remaining", "spellcasts", a)
 end
 
-function TheoryCraft_SetTalent(arg1)
+function TheoryCraft_SetTalent(this)
 	local name = this:GetName()
 	local i = 1
 	local i2 = tonumber(string.sub(name, 18, 18))
@@ -526,7 +526,7 @@ function TheoryCraft_SetTalent(arg1)
 	TheoryCraft_UpdateTalents()
 end
 
-function TheoryCraft_UpdateButtonTextPos()
+function TheoryCraft_UpdateButtonTextPos(this)
 	TheoryCraft_Settings["buttontextx"] = (this:GetParent():GetLeft()-this:GetLeft())/3
 	TheoryCraft_Settings["buttontexty"] = (this:GetParent():GetTop()-this:GetTop())/3
 	TheoryCraftdummytext:GetParent():ClearAllPoints()

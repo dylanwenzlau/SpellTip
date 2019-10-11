@@ -1797,7 +1797,6 @@ function TheoryCraft_GetSpellDataByFrame(frame, force)
 end
 
 function TheoryCraft_GetSpellDataByName(spellname, spellrank, force, macro)
-	print("in TheoryCraft_GetSpellDataByName")
 	if spellrank == nil then spellrank = 0 end
 	local description = TheoryCraft_TooltipData[spellname.."("..spellrank..")"] or (macro and TheoryCraft_TooltipData[spellname.."MACRO("..spellrank..")"])
 	if (description) then

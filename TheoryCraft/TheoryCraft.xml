@@ -277,8 +277,8 @@
 			<AbsDimension x="73" y="20"/>
 		</Size>
 		<Scripts>
-			<OnClick>PlaySound(&quot;igMainMenuOptionCheckBoxOn&quot;);
-				TheoryCraft_OutfitChange()
+			<OnClick>
+				TheoryCraft_OutfitChange(self)
 			</OnClick>
 		</Scripts>
 	</Button>
@@ -394,7 +394,7 @@
 			<Color b="0.1" g="0.1" r="0.1"/>
 		</Shadow>
 		<Scripts>
-			<OnClick>TheoryCraft_SetTalent()
+			<OnClick>TheoryCraft_SetTalent(self)
 			</OnClick>
 		</Scripts>
 	</Button>
@@ -1074,10 +1074,10 @@
 									<OnDragStart>self:StartMoving()
 									</OnDragStart>
 									<OnDragStop>self:StopMovingOrSizing()
-										TheoryCraft_UpdateButtonTextPos()
+										TheoryCraft_UpdateButtonTextPos(self)
 									</OnDragStop>
 									<OnMouseUp>self:StopMovingOrSizing()
-										TheoryCraft_UpdateButtonTextPos()
+										TheoryCraft_UpdateButtonTextPos(self)
 									</OnMouseUp>
 								</Scripts>
 								<Layers>

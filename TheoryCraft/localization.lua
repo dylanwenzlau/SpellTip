@@ -246,7 +246,7 @@ TheoryCraft_SpellMinMaxReader = {
 
 	{ pattern = "(%d+) to (%d+) Fire damage.",							-- Magma totem
 		type={"mindamage", "maxdamage"} },
-	{ pattern = "(%d+) Fire damage.",								-- Magma totem
+	{ pattern = "(%d+) Fire damage",								-- Magma totem
 		type={"bothdamage"} },
 
 	{ pattern = "yards for (%d+) to (%d+) every ",							-- Healing Stream totem

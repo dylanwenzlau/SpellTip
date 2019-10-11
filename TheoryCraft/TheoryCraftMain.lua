@@ -560,12 +560,12 @@ end
 
 --- OnShow ---
 
--- function TheoryCraft_OnShow()
---     	TheoryCraft_AddTooltipInfo(GameTooltip)
--- 	if (TheoryCraft_OnShow_Save) then
--- 	    	TheoryCraft_OnShow_Save()
--- 	end
--- end
+function TheoryCraft_OnShow()
+	TheoryCraft_AddTooltipInfo(GameTooltip)
+	if (TheoryCraft_OnShow_Save) then
+		TheoryCraft_OnShow_Save()
+	end
+end
 
 function TheoryCraft_GLOCK_UpdateResist(this, arg1)
 	this:OldSetText(arg1)
@@ -1106,7 +1106,7 @@ function TheoryCraft_Command(cmd)
 	end
 end
 
-function TheoryCraft_OutfitChange(arg1)
+function TheoryCraft_OutfitChange(this)
 	local id = this:GetName()
 	local name = this:GetText()
 	if (id == "TheoryCraftSetToAll") then
